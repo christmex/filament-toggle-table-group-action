@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Christmex\FilamentToggleTableGroupAction;
 
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
@@ -13,14 +13,14 @@ use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
-use VendorName\Skeleton\Testing\TestsSkeleton;
+use Christmex\FilamentToggleTableGroupAction\Commands\FilamentToggleTableGroupActionCommand;
+use Christmex\FilamentToggleTableGroupAction\Testing\TestsFilamentToggleTableGroupAction;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'skeleton';
+    public static string $name = 'filament-toggle-table-group-action';
 
-    public static string $viewNamespace = 'skeleton';
+    public static string $viewNamespace = 'filament-toggle-table-group-action';
 
     public function configurePackage(Package $package): void
     {
@@ -36,7 +36,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub(':vendor_slug/:package_slug');
+                    ->askToStarRepoOnGitHub('christmex/filament-toggle-table-group-action');
             });
 
         $configFileName = $package->shortName();
@@ -80,18 +80,18 @@ class SkeletonServiceProvider extends PackageServiceProvider
         if (app()->runningInConsole()) {
             foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
                 $this->publishes([
-                    $file->getRealPath() => base_path("stubs/skeleton/{$file->getFilename()}"),
-                ], 'skeleton-stubs');
+                    $file->getRealPath() => base_path("stubs/filament-toggle-table-group-action/{$file->getFilename()}"),
+                ], 'filament-toggle-table-group-action-stubs');
             }
         }
 
         // Testing
-        Testable::mixin(new TestsSkeleton);
+        Testable::mixin(new TestsFilamentToggleTableGroupAction);
     }
 
     protected function getAssetPackageName(): ?string
     {
-        return ':vendor_slug/:package_slug';
+        return 'christmex/filament-toggle-table-group-action';
     }
 
     /**
@@ -100,9 +100,9 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            // AlpineComponent::make('skeleton', __DIR__ . '/../resources/dist/components/skeleton.js'),
-            // Css::make('skeleton-styles', __DIR__ . '/../resources/dist/skeleton.css'),
-            // Js::make('skeleton-scripts', __DIR__ . '/../resources/dist/skeleton.js'),
+            // AlpineComponent::make('filament-toggle-table-group-action', __DIR__ . '/../resources/dist/components/filament-toggle-table-group-action.js'),
+            // Css::make('filament-toggle-table-group-action-styles', __DIR__ . '/../resources/dist/filament-toggle-table-group-action.css'),
+            // Js::make('filament-toggle-table-group-action-scripts', __DIR__ . '/../resources/dist/filament-toggle-table-group-action.js'),
         ];
     }
 
@@ -112,7 +112,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            SkeletonCommand::class,
+            FilamentToggleTableGroupActionCommand::class,
         ];
     }
 
@@ -146,7 +146,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
     protected function getMigrations(): array
     {
         return [
-            'create_skeleton_table',
+            'create_filament-toggle-table-group-action_table',
         ];
     }
 }

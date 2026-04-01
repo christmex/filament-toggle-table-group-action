@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Christmex\FilamentToggleTableGroupAction\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentToggleTableGroupActionCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-toggle-table-group-action';
 
     public $description = 'My command';
 

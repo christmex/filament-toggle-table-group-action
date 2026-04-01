@@ -1,31 +1,29 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "christmex/filament-toggle-table-group-action",
+    "description": "This is my package filament-toggle-table-group-action",
     "keywords": [
-        ":vendor_name",
+        "christmex",
         "laravel",
         "filamentphp",
         "filament",
         "filament-plugin",
-        ":package_slug"
+        "filament-toggle-table-group-action"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/christmex/filament-toggle-table-group-action",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/christmex/filament-toggle-table-group-action/issues",
+        "source": "https://github.com/christmex/filament-toggle-table-group-action"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "christmex",
+            "email": "christmex@yahoo.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
-        "filament/filament": "^5.0",
-        "filament/forms": "^5.0",
         "filament/tables": "^5.0",
         "spatie/laravel-package-tools": "^1.15.0"
     },
@@ -43,13 +41,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Christmex\\FilamentToggleTableGroupAction\\": "src/",
+            "Christmex\\FilamentToggleTableGroupAction\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Christmex\\FilamentToggleTableGroupAction\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -64,10 +62,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Christmex\\FilamentToggleTableGroupAction\\FilamentToggleTableGroupActionServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentToggleTableGroupAction": "Christmex\\FilamentToggleTableGroupAction\\Facades\\FilamentToggleTableGroupAction"
             }
         }
     },
