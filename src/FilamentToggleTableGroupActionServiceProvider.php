@@ -2,7 +2,6 @@
 
 namespace Christmex\FilamentToggleTableGroupAction;
 
-use Christmex\FilamentToggleTableGroupAction\Commands\FilamentToggleTableGroupActionCommand;
 use Christmex\FilamentToggleTableGroupAction\Testing\TestsFilamentToggleTableGroupAction;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
