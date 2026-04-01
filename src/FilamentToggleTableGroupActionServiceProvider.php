@@ -2,14 +2,19 @@
 
 namespace Christmex\FilamentToggleTableGroupAction;
 
-use Christmex\FilamentToggleTableGroupAction\Testing\TestsFilamentToggleTableGroupAction;
+use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
+use Filament\Support\Assets\Css;
+use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
+use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Christmex\FilamentToggleTableGroupAction\Commands\FilamentToggleTableGroupActionCommand;
+use Christmex\FilamentToggleTableGroupAction\Testing\TestsFilamentToggleTableGroupAction;
 
 class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvider
 {
@@ -81,7 +86,7 @@ class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvid
         }
 
         // Testing
-        // Testable::mixin(new TestsFilamentToggleTableGroupAction);
+        Testable::mixin(new TestsFilamentToggleTableGroupAction);
     }
 
     protected function getAssetPackageName(): ?string
@@ -138,6 +143,8 @@ class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvid
      */
     protected function getMigrations(): array
     {
-        return [];
+        return [
+            'create_filament-toggle-table-group-action_table',
+        ];
     }
 }
