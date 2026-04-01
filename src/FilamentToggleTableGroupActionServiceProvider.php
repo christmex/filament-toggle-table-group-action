@@ -11,7 +11,6 @@ use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
-use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -86,7 +85,7 @@ class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvid
         }
 
         // Testing
-        Testable::mixin(new TestsFilamentToggleTableGroupAction);
+        // Testable::mixin(new TestsFilamentToggleTableGroupAction);
     }
 
     protected function getAssetPackageName(): ?string
@@ -111,9 +110,7 @@ class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvid
      */
     protected function getCommands(): array
     {
-        return [
-            FilamentToggleTableGroupActionCommand::class,
-        ];
+        return [];
     }
 
     /**
@@ -145,8 +142,6 @@ class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvid
      */
     protected function getMigrations(): array
     {
-        return [
-            'create_filament-toggle-table-group-action_table',
-        ];
+        return [];
     }
 }
