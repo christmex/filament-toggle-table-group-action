@@ -112,7 +112,7 @@ class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvid
     protected function getCommands(): array
     {
         return [
-            SkeletonCommand::class
+            SkeletonCommand::class,
         ];
     }
 
