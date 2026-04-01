@@ -7,6 +7,11 @@ use Filament\Support\Icons\Heroicon;
 
 class ToggleTableGroupAction extends Action
 {
+    public static function getDefaultName(): ?string
+    {
+        return 'toggle-table-group';
+    }
+
     protected function setUp(): void
     {
         parent::setUp();
