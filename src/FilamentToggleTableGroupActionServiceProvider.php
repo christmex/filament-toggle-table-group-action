@@ -2,6 +2,7 @@
 
 namespace Christmex\FilamentToggleTableGroupAction;
 
+use Christmex\FilamentToggleTableGroupAction\Commands\SkeletonCommand;
 use Christmex\FilamentToggleTableGroupAction\Testing\TestsFilamentToggleTableGroupAction;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
@@ -110,7 +111,9 @@ class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvid
      */
     protected function getCommands(): array
     {
-        return [];
+        return [
+            SkeletonCommand::class
+        ];
     }
 
     /**
