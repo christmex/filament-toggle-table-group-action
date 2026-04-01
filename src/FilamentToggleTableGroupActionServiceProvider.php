@@ -2,6 +2,7 @@
 
 namespace Christmex\FilamentToggleTableGroupAction;
 
+use Christmex\FilamentToggleTableGroupAction\Testing\TestsFilamentToggleTableGroupAction;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -13,8 +14,6 @@ use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Christmex\FilamentToggleTableGroupAction\Commands\FilamentToggleTableGroupActionCommand;
-use Christmex\FilamentToggleTableGroupAction\Testing\TestsFilamentToggleTableGroupAction;
 
 class FilamentToggleTableGroupActionServiceProvider extends PackageServiceProvider
 {
