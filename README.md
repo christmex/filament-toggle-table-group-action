@@ -5,6 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/christmex/filament-toggle-table-group-action/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/christmex/filament-toggle-table-group-action/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/christmex/filament-toggle-table-group-action.svg?style=flat-square)](https://packagist.org/packages/christmex/filament-toggle-table-group-action)
 
+![Filament Toggle Table Group Action](hero-filament-toggle-table-group-action.png)
 Easily toggle row grouping in your Filament tables
 
 ## Installation
