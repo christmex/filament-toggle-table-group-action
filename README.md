@@ -1,13 +1,11 @@
-# This is my package filament-toggle-table-group-action
+# Filament Toggle Table Group Action
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/christmex/filament-toggle-table-group-action.svg?style=flat-square)](https://packagist.org/packages/christmex/filament-toggle-table-group-action)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/christmex/filament-toggle-table-group-action/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/christmex/filament-toggle-table-group-action/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/christmex/filament-toggle-table-group-action/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/christmex/filament-toggle-table-group-action/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/christmex/filament-toggle-table-group-action.svg?style=flat-square)](https://packagist.org/packages/christmex/filament-toggle-table-group-action)
 
-
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Easily toggle row grouping in your Filament tables
 
 ## Installation
 
@@ -55,8 +53,11 @@ return [
 ## Usage
 
 ```php
-$filamentToggleTableGroupAction = new Christmex\FilamentToggleTableGroupAction();
-echo $filamentToggleTableGroupAction->echoPhrase('Hello, Christmex!');
+use Christmex\FilamentToggleTableGroupAction\Actions\ToggleTableGroupAction;
+//...
+->toolbarActions([
+    ToggleTableGroupAction::make()
+])
 ```
 
 ## Testing
